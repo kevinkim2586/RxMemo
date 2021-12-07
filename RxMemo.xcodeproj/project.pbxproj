@@ -10,7 +10,6 @@
 		0B5EDD81A65CCCA79A5A76E2 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41079E1824163BD3235AD99 /* Pods_RxMemo.framework */; };
 		7CEAC9A0275FA1B4005AF338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC99F275FA1B4005AF338 /* AppDelegate.swift */; };
 		7CEAC9A2275FA1B4005AF338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC9A1275FA1B4005AF338 /* SceneDelegate.swift */; };
-		7CEAC9A4275FA1B4005AF338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC9A3275FA1B4005AF338 /* ViewController.swift */; };
 		7CEAC9A7275FA1B4005AF338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEAC9A5275FA1B4005AF338 /* Main.storyboard */; };
 		7CEAC9AA275FA1B4005AF338 /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC9A8275FA1B4005AF338 /* RxMemo.xcdatamodeld */; };
 		7CEAC9AC275FA1B5005AF338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEAC9AB275FA1B5005AF338 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 		7CEAC99C275FA1B4005AF338 /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEAC99F275FA1B4005AF338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CEAC9A1275FA1B4005AF338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7CEAC9A3275FA1B4005AF338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CEAC9A6275FA1B4005AF338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CEAC9A9275FA1B4005AF338 /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		7CEAC9AB275FA1B5005AF338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 				1DA2CAF51AC05722A09B38A9 /* Pods-RxMemo.debug.xcconfig */,
 				FC6A71FD2EA2580264076615 /* Pods-RxMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,16 +72,55 @@
 		7CEAC99E275FA1B4005AF338 /* RxMemo */ = {
 			isa = PBXGroup;
 			children = (
+				7CEAC9BA275FA52F005AF338 /* Scene */,
+				7CEAC9B9275FA520005AF338 /* Service */,
+				7CEAC9B8275FA504005AF338 /* ViewModel */,
+				7CEAC9B7275FA4F4005AF338 /* ViewController */,
+				7CEAC9B6275FA4DB005AF338 /* Model */,
 				7CEAC99F275FA1B4005AF338 /* AppDelegate.swift */,
 				7CEAC9A1275FA1B4005AF338 /* SceneDelegate.swift */,
-				7CEAC9A3275FA1B4005AF338 /* ViewController.swift */,
-				7CEAC9A5275FA1B4005AF338 /* Main.storyboard */,
 				7CEAC9AB275FA1B5005AF338 /* Assets.xcassets */,
-				7CEAC9AD275FA1B5005AF338 /* LaunchScreen.storyboard */,
 				7CEAC9B0275FA1B5005AF338 /* Info.plist */,
 				7CEAC9A8275FA1B4005AF338 /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
+			sourceTree = "<group>";
+		};
+		7CEAC9B6275FA4DB005AF338 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CEAC9B7275FA4F4005AF338 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7CEAC9A5275FA1B4005AF338 /* Main.storyboard */,
+				7CEAC9AD275FA1B5005AF338 /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7CEAC9B8275FA504005AF338 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7CEAC9B9275FA520005AF338 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7CEAC9BA275FA52F005AF338 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		871EA950B60612E07A10FEC6 /* Frameworks */ = {
@@ -210,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CEAC9A4275FA1B4005AF338 /* ViewController.swift in Sources */,
 				7CEAC9A0275FA1B4005AF338 /* AppDelegate.swift in Sources */,
 				7CEAC9A2275FA1B4005AF338 /* SceneDelegate.swift in Sources */,
 				7CEAC9AA275FA1B4005AF338 /* RxMemo.xcdatamodeld in Sources */,
