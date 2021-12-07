@@ -14,6 +14,7 @@
 		7CEAC9AA275FA1B4005AF338 /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC9A8275FA1B4005AF338 /* RxMemo.xcdatamodeld */; };
 		7CEAC9AC275FA1B5005AF338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CEAC9AB275FA1B5005AF338 /* Assets.xcassets */; };
 		7CEAC9AF275FA1B5005AF338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CEAC9AD275FA1B5005AF338 /* LaunchScreen.storyboard */; };
+		7CEAC9BC275FBDBE005AF338 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEAC9BB275FBDBE005AF338 /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7CEAC9AB275FA1B5005AF338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CEAC9AE275FA1B5005AF338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CEAC9B0275FA1B5005AF338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CEAC9BB275FBDBE005AF338 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		F41079E1824163BD3235AD99 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A71FD2EA2580264076615 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		7CEAC9B6275FA4DB005AF338 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7CEAC9BB275FBDBE005AF338 /* Memo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				7CEAC9A0275FA1B4005AF338 /* AppDelegate.swift in Sources */,
 				7CEAC9A2275FA1B4005AF338 /* SceneDelegate.swift in Sources */,
 				7CEAC9AA275FA1B4005AF338 /* RxMemo.xcdatamodeld in Sources */,
+				7CEAC9BC275FBDBE005AF338 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
