@@ -21,7 +21,6 @@ extension ViewModelBindableType where Self: UIViewController {
     mutating func bind(viewModel: Self.ViewModelType) {
         self.viewModel = viewModel
         loadViewIfNeeded()
-        
         bindViewModel()
     }
 }
