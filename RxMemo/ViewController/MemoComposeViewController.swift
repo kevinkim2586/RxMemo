@@ -41,7 +41,7 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
         cancelButton.rx.action = viewModel.cancelAction
         
         saveButton.rx.tap
-            .throttle(.milliseconds(500), scheduler: MainScheduler) // 더블탭을 막기 위해 0.5초에 한번씩만 tap 이벤트 처리
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance) // 더블탭을 막기 위해 0.5초에 한번씩만 tap 이벤트 처리
             .withLatestFrom(contentTextView.rx.text.orEmpty)
             .bind(to: viewModel.saveAction.inputs)
             .disposed(by: rx.disposeBag)
