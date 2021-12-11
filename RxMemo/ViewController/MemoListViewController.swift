@@ -21,7 +21,6 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         super.viewDidLoad()
 
         
-        
     }
     
     func bindViewModel() {
@@ -39,6 +38,15 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.makeCreateAction()
+        
+        Observable.zip(listTableView.rx.modelSelected(Memo.self), listTableView.rx.itemSelected)
+            .do(onNext: { [unowned self] (_, indexPath) in
+                self.listTableView.deselectRow(at: indexPath, animated: true)
+            })
+            .map { $0.0 }       // 이제 indexPath는 필요없으니 model만 방출되도록
+            .bind(to: viewModel.detailAction.inputs)
+            .disposed(by: rx.disposeBag)
+    
     }
-
+    
 }

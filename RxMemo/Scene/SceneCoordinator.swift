@@ -9,6 +9,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        return self.children.first ?? self
+    }
+}
+
 //MARK: - 화면 전환 담당
 /// Window 인스턴스와 현재 화면에 표시되어있는 Scene 을 속성으로 가지고 있어야 함.
 class SceneCoordinator: SceneCoordinatorType {
@@ -33,7 +39,7 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentVC = targetVC
+            currentVC = targetVC.sceneViewController
             window.rootViewController = targetVC
             subject.onCompleted()
         case .push:
@@ -42,14 +48,21 @@ class SceneCoordinator: SceneCoordinatorType {
                 break
             }
             
+            nav.rx.willShow
+                .subscribe( onNext: { [unowned self] evt in
+                    self.currentVC = evt.viewController.sceneViewController
+                })
+                .disposed(by: disposeBag)
+            
+            
             nav.pushViewController(targetVC, animated: animated)
-            currentVC = targetVC
+            currentVC = targetVC.sceneViewController
             subject.onCompleted()
         case .modal:
             currentVC.present(targetVC, animated: animated) {
                 subject.onCompleted()
             }
-            currentVC = targetVC
+            currentVC = targetVC.sceneViewController
         }
         return Completable.empty()
     }
@@ -63,7 +76,7 @@ class SceneCoordinator: SceneCoordinatorType {
             
             if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) {
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             }
