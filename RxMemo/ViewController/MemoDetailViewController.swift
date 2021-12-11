@@ -50,7 +50,10 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         
         editButton.rx.action = viewModel.makeEditAction()
         
-        // action 으로 구현하든, tap 으로 구현하든 자유 
+        deleteButton.rx.action = viewModel.makeDeleteAction()
+        
+        
+        // action 으로 구현하든, tap 으로 구현하든 자유
         
         shareButton.rx.tap
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
